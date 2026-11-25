@@ -41,10 +41,10 @@ form.addEventListener('submit', async e => {
   try {
     await fetch(endpoint, {method:'POST', mode:'no-cors', credentials:'omit', body});
     sent = true;
-    btn.textContent = '已傳送請求';
-    status.textContent = '報名請求已傳送，暫時無法確認 Google 表單是否收件。💙\n將於 12/2 20:00 以前透過 Threads 私訊報名成功的人。';
+    btn.textContent = '已送出！';
+    status.textContent = '謝謝你的報名！💙\n將於 12/2 20:00 以前透過 Threads 私訊報名成功的人。';
   } catch (err) {
-    status.textContent = '無法確認資料是否送達，請先聯絡主辦人確認，避免重複報名。';
+    status.textContent = '無法確認資料是否送達，請先聯絡主辦人確認。';
     sent = true;
     btn.textContent = '送出狀態未確認';
   } finally {
